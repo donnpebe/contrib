@@ -1,7 +1,6 @@
 package gzip
 
 import (
-	"compress/gzip"
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
@@ -9,6 +8,7 @@ import (
 	"testing"
 
 	"github.com/gin-gonic/gin"
+	"github.com/klauspost/compress/gzip"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -20,7 +20,7 @@ func newServer() *gin.Engine {
 	router := gin.Default()
 	router.Use(Gzip(DefaultCompression))
 	router.GET("/", func(c *gin.Context) {
-		c.Header("Content-Length", strconv.Itoa(len(testResponse)))
+		c.Writer.Header().Set("Content-Length", strconv.Itoa(len(testResponse)))
 		c.String(200, testResponse)
 	})
 	return router

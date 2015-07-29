@@ -1,12 +1,12 @@
 package gzip
 
 import (
-	"compress/gzip"
 	"net/http"
 	"path/filepath"
 	"strings"
 
 	"github.com/gin-gonic/gin"
+	"github.com/klauspost/compress/gzip"
 )
 
 const (
@@ -26,11 +26,11 @@ func Gzip(level int) gin.HandlerFunc {
 			return
 		}
 
-		c.Header("Content-Encoding", "gzip")
-		c.Header("Vary", "Accept-Encoding")
+		c.Writer.Header().Set("Content-Encoding", "gzip")
+		c.Writer.Header().Set("Vary", "Accept-Encoding")
 		c.Writer = &gzipWriter{c.Writer, gz}
 		defer func() {
-			c.Header("Content-Length", "")
+			c.Writer.Header().Set("Content-Length", "")
 			gz.Close()
 		}()
 		c.Next()

@@ -1,10 +1,47 @@
 {
-	"ImportPath": "github.com/gin-gonic/contrib/gzip",
-	"GoVersion": "go1.3",
+	"ImportPath": "github.com/donnpebe/contrib/gzip",
+	"GoVersion": "go1.4.2",
 	"Deps": [
 		{
 			"ImportPath": "github.com/gin-gonic/gin",
-			"Rev": "ac0ad2fed865d40a0adc1ac3ccaadc3acff5db4b"
+			"Rev": "3066c3575440ea1f5d9a9633ce889c15101eb117"
+		},
+		{
+			"ImportPath": "github.com/klauspost/compress/flate",
+			"Rev": "bbbc5c0186805ae4b169eec4d3dca2cbb0441356"
+		},
+		{
+			"ImportPath": "github.com/klauspost/compress/gzip",
+			"Rev": "bbbc5c0186805ae4b169eec4d3dca2cbb0441356"
+		},
+		{
+			"ImportPath": "github.com/klauspost/cpuid",
+			"Rev": "3b0816bb6cb682eea8e1973f4168b6c86880efe1"
+		},
+		{
+			"ImportPath": "github.com/klauspost/crc32",
+			"Rev": "55bf046ad09604e8e121b8494e3f16b081b1a6d5"
+		},
+		{
+			"ImportPath": "github.com/manucorporat/sse",
+			"Rev": "fe6ea2c8e398672518ef204bf0fbd9af858d0e15"
+		},
+		{
+			"ImportPath": "github.com/mattn/go-colorable",
+			"Rev": "40e4aedc8fabf8c23e040057540867186712faa5"
+		},
+		{
+			"ImportPath": "github.com/stretchr/testify/assert",
+			"Rev": "dab07ac62d4905d3e48d17dc549c684ac3b7c15a"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "3a29182c25eeabbaaf94daaeecbc7823d86261e7"
+		},
+		{
+			"ImportPath": "gopkg.in/joeybloggs/go-validate-yourself.v4",
+			"Comment": "v4.0.4",
+			"Rev": "47a6634ff80051b92481b6c076854b85119fd267"
 		}
 	]
 }
